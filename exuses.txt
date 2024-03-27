@@ -1,0 +1,5 @@
+instead of passing db as a parameter to authorisation , uthorisation could be part of db class or using static, but i choose this , no reasson
+
+youn eldery and regular classes are created according to task ( if i got it correctly) anyway now it hold only discount amoun , but teoreticly can be extend
+
+thought to create new class for admin 
