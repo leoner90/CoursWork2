@@ -1,8 +1,6 @@
 #pragma once
 #include "customers\Customer.h"
 
- 
-
 class RegularCustomer : public Customer
 {
 public:
@@ -12,7 +10,4 @@ public:
 
 private:
 	float discountInPercent;
-
 };
-
- 

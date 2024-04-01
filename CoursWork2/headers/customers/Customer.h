@@ -4,8 +4,6 @@
 
 using namespace std;
 
-//************ Abstract Class ************
-
 class Customer : public Account
 {
 public:
@@ -20,10 +18,14 @@ public:
 	int getCustomerAge();
 	virtual float getPriceWithDiscount(float initPrice) { return 0;};
 	virtual float getDiscount() { return 0;};
+	int getNumberOfPetsOwned();
+	int getNumberOfPetsOnTrial();
+
 	//setters
 	void setCustomerAddress();
-
 	bool isCustomerAdmin();
+	void setNumberOfPetsOwned(int value);
+	void setNumberOfPetsOnTrial(int value);
 	
 private:
 	int customerID;
@@ -33,17 +35,9 @@ private:
 	string password;
 	string CustomerName;
 	string address;
-	
-	virtual void applyDiscount(int price) ;
-	int numberOfPetsOwned, numberOfPetsOnTrial; // It should store the number of pets each customer has used as a free trial,
-	float debtForPets; // the amount to be paid if the pet is not a free trial(a customer may buy few virtual pets at once).
 
-	//pet ID auto increment
+	int numberOfPetsOwned, numberOfPetsOnTrial; // It should store the number of pets each customer has used as a free trial,
+
+	//ID auto increment
 	static int idIncrementer;
-	
- 
-	
 };
- 
- 
- 

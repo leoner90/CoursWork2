@@ -131,11 +131,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="headers\animals\Cat.h" />
-    <ClInclude Include="headers\animals\Dog.h" />
-    <ClInclude Include="headers\animals\Fox.h" />
-    <ClInclude Include="headers\animals\Pet.h" />
-    <ClInclude Include="headers\animals\PetDB.h" />
+    <ClInclude Include="headers\pets\Cat.h" />
+    <ClInclude Include="headers\pets\Dog.h" />
+    <ClInclude Include="headers\pets\Fox.h" />
+    <ClInclude Include="headers\pets\Pet.h" />
+    <ClInclude Include="headers\pets\PetDB.h" />
     <ClInclude Include="headers\customers\Customer.h" />
     <ClInclude Include="headers\customers\CustomersDB.h" />
     <ClInclude Include="headers\customers\ElderyCustomer.h" />
@@ -143,15 +143,16 @@
     <ClInclude Include="headers\customers\YoungCustomer.h" />
     <ClInclude Include="headers\customers\Account.h" />
     <ClInclude Include="headers\customers\Authentication.h" />
+    <ClInclude Include="headers\pets\PetManager.h" />
     <ClInclude Include="headers\shop\Shop.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="source\animals\Cat.cpp" />
-    <ClCompile Include="source\animals\Dog.cpp" />
-    <ClCompile Include="source\animals\Fox.cpp" />
-    <ClCompile Include="source\animals\Pet.cpp" />
-    <ClCompile Include="source\animals\PetDB.cpp" />
+    <ClCompile Include="source\pets\Cat.cpp" />
+    <ClCompile Include="source\pets\Dog.cpp" />
+    <ClCompile Include="source\pets\Fox.cpp" />
+    <ClCompile Include="source\pets\Pet.cpp" />
+    <ClCompile Include="source\pets\PetDB.cpp" />
     <ClCompile Include="source\customers\Customer.cpp" />
     <ClCompile Include="source\customers\CustomersDB.cpp" />
     <ClCompile Include="source\customers\ElderyCustomer.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="source\customers\YoungCustomer.cpp" />
     <ClCompile Include="source\customers\Account.cpp" />
     <ClCompile Include="source\customers\Authentication.cpp" />
+    <ClCompile Include="source\pets\PetManager.cpp" />
     <ClCompile Include="source\shop\Shop.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

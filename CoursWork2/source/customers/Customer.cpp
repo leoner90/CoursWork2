@@ -14,13 +14,11 @@ Customer::Customer(string inputLogin, string inputPassword, int inputAge, bool a
 	password = inputPassword;
 	CustomerAge = inputAge;
 
-
+	//total pets owned
 	numberOfPetsOwned = 0;
 	numberOfPetsOnTrial = 0; // It should store the number of pets each customer has used as a free trial,
-	debtForPets = 0;
 
 	isAdmin = adminRights;
-
 	//if not admin ask all info
 	if (!adminRights)
 	{
@@ -68,6 +66,16 @@ int Customer::getCustomerAge()
 	return CustomerAge;
 }
 
+int Customer::getNumberOfPetsOwned()
+{
+	return numberOfPetsOwned;
+}
+
+int Customer::getNumberOfPetsOnTrial()
+{
+	return numberOfPetsOnTrial;
+}
+
 //************* Setters
 void Customer::setCustomerAddress()
 {
@@ -77,6 +85,8 @@ void Customer::setCustomerAddress()
 	cin.ignore();  // flush  
 	getline(std::cin, newAddress);
 	address = newAddress;
+
+	std::cout << "Your Address Changed successfully: " << endl;
 }
 
 
@@ -86,7 +96,13 @@ bool Customer::isCustomerAdmin()
 	return isAdmin;
 }
 
-void Customer::applyDiscount(int age)
+void Customer::setNumberOfPetsOwned(int value)
 {
-
+	numberOfPetsOwned += value;
 }
+
+void Customer::setNumberOfPetsOnTrial(int value)
+{
+	numberOfPetsOnTrial += value;
+}
+

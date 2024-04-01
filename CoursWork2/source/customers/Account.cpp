@@ -14,6 +14,7 @@ void Account::setBalance()
 	cout << "Enter amount of money to put into your account" << endl;
 	cin >> AddBalance;
 	balance += AddBalance;
+	std::cout << "You Balance Updated successfully: " << endl;
 }
 
 float Account::getBalance()
@@ -30,7 +31,3 @@ void Account::reduceBalance(float reduceAmmount)
 {
 	balance -= reduceAmmount;
 }
-
-
-
-

@@ -2,7 +2,6 @@
 
 RegularCustomer::RegularCustomer(string inputLogin, string inputPassword, int inputAge, bool isAdmin) :
 	Customer(inputLogin, inputPassword, inputAge, isAdmin)
-
 {
 	discountInPercent = 0.f; // percentage
 }

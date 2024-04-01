@@ -11,5 +11,3 @@ public:
 private:
 	float discountInPercent;
 };
-
- 

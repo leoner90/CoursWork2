@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\animals\Cat.h">
+    <ClInclude Include="headers\pets\Cat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\animals\Dog.h">
+    <ClInclude Include="headers\pets\Dog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\animals\Fox.h">
+    <ClInclude Include="headers\pets\Fox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\animals\Pet.h">
+    <ClInclude Include="headers\pets\Pet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\animals\PetDB.h">
+    <ClInclude Include="headers\pets\PetDB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\customers\Customer.h">
@@ -54,21 +54,24 @@
     <ClInclude Include="headers\shop\Shop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="headers\pets\PetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\animals\Cat.cpp">
+    <ClCompile Include="source\pets\Cat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\animals\Dog.cpp">
+    <ClCompile Include="source\pets\Dog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\animals\Fox.cpp">
+    <ClCompile Include="source\pets\Fox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\animals\Pet.cpp">
+    <ClCompile Include="source\pets\Pet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\animals\PetDB.cpp">
+    <ClCompile Include="source\pets\PetDB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\customers\Customer.cpp">
@@ -96,6 +99,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pets\PetManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

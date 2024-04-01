@@ -3,9 +3,10 @@
 
 Authentication::Authentication(CustomersDb& customersDb)
 {
-	localAccessToCustomersDb = &customersDb;
+	localAccessToCustomersDb = &customersDb; // create local DB on CLASS INIT
 }
 
+//LOGIN
 int Authentication::loginCustomer()
 {
 	system("cls");
@@ -27,6 +28,7 @@ int Authentication::loginCustomer()
 	return customerId; // if 0 return -1 eg. false
 }
 
+//REGISTRATION
 int Authentication::registerNewCustomer()
 {
 
@@ -47,6 +49,8 @@ int Authentication::registerNewCustomer()
 	if (validation())
 	{
 		 localAccessToCustomersDb->AddNewCustomer(age, login, password); 
+		 int customerId = localAccessToCustomersDb->FindCustomerId(login, password);
+		 return customerId;
 	}
 	else 
 	{
@@ -56,10 +60,10 @@ int Authentication::registerNewCustomer()
 		registerNewCustomer();
 	}
 
-
-	return 0;
+	return -1;
 }
 
+//VALIDATION
 bool Authentication::validation()
 {
 	bool isValid = true;

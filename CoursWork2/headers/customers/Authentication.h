@@ -6,7 +6,6 @@ class CustomersDb;
 
 using namespace std;
 
-
 class Authentication 
 {
 public:

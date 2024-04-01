@@ -1,10 +1,9 @@
 #include "customers/CustomersDB.h"
+#include "customers/ElderyCustomer.h"
+#include "customers/YoungCustomer.h"
+#include "customers/RegularCustomer.h"
 
-
-CustomersDb::CustomersDb()
-{
-}
-
+//ADD CUSTOMER
 void CustomersDb::AddNewCustomer(int age, string login, string password, bool isAdmin)
 {
 	if(age < 14) allCustomers.push_back(new YoungCustomer(login, password, age, isAdmin));
@@ -15,6 +14,7 @@ void CustomersDb::AddNewCustomer(int age, string login, string password, bool is
 	if(!isAdmin) cout << endl << "Account Created Successfully" << endl;
 }
 
+//FIND CUSTOMER BY ID
 int CustomersDb::FindCustomerId(string login, string password)
 {
 	int customerId = -1;
@@ -28,6 +28,7 @@ int CustomersDb::FindCustomerId(string login, string password)
 	return customerId;
 }
 
+//CHECK DOES CUSTOMER EXIST
 bool CustomersDb::DoesCustomerExists(string login)
 {
 	int exists = false;
@@ -41,11 +42,9 @@ bool CustomersDb::DoesCustomerExists(string login)
 	return exists;
 }
 
- 
-
+//FIND CUSTOMER BY ID
 Customer* CustomersDb::findCustomerById(int id)
 {
- 
 	for (auto customer : allCustomers)
 	{
 		if (customer->getCustomerId() == id)
@@ -56,7 +55,7 @@ Customer* CustomersDb::findCustomerById(int id)
 	return nullptr;
 }
 
-//ADMIN ONLY
+//ADMIN ONLY , SHOW ALL CUSTOMER
 void CustomersDb::ShowAllCustomers()
 {
 	system("cls");
@@ -75,7 +74,7 @@ void CustomersDb::ShowAllCustomers()
 	}
 }
 
-//ADMIN ONLY
+//ADMIN ONLY , DELETE CUSTOMER BY ID
 void CustomersDb::DeleteCustomer()
 {
 	int customerIdToDelete;
@@ -98,6 +97,3 @@ void CustomersDb::DeleteCustomer()
 	}
 	if(!isDeleted) cout << "Wrong ID" << endl;
 }
-
-
- 

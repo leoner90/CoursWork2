@@ -10,6 +10,10 @@ public:
 	Cat(string name, string petDescription, float petPrice);
 	Cat();
 
+	void BuyPet(int customerId) override;
+	void RentPet(int customerId) override;
+	bool isRentPeriodFinished() override;
+
 	// POLYMORF asking for food or attention.
 	void aksForFood() override;
 	void aksForAttention() override;
@@ -17,15 +21,11 @@ public:
 	//getters
 	string getPetType() override;
 
-	//Numbers
+	//static numbers (public!!!)
 	static int catAmountOfPetsInStock;
-	static int petPopularity;  
-private:
+	static int petPopularity;
 
+private:
 	//pets in stock
 	const string petType = "CAT";
-
-	
 };
-
-

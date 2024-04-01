@@ -12,17 +12,15 @@ public:
 
 	void aksForFood() override;
 	void aksForAttention() override;
-
+	void BuyPet(int customerId) override;
+	void RentPet(int customerId) override;
+	bool isRentPeriodFinished() override;
 	//getters
 	string getPetType() override;
 
-	//numbers
+	//static numbers (public!!!)
 	static int foxAmountOfPetsInStock;
 	static int petPopularity; // how many people have bought specific pets STATIC
-
 private:
 	const string petType = "FOX";
-	//pets in stock
-
 };
-

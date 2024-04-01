@@ -2,23 +2,21 @@
 #include <iostream>
 using namespace std;
 
-
-//************ Abstract Class ************
 class Pet
 {
 public:
 	Pet(string name, string petDescription, float petPrice);
 	Pet();
-
 	//~Pet();
 	
 	// POLYMORF asking for food or attention.
 	virtual void aksForFood() {};
 	virtual void aksForAttention() {};
+	virtual void setPopulation() {};
+	virtual void BuyPet(int customerId);
+	virtual void RentPet(int customerId);
+	virtual bool isRentPeriodFinished();
 
-	void BuyPet(int customerId);
-	void RentPet(int customerId);
-	bool isRentPeriodFinished();
 
 	//getters
 	float getMoodIndex();
@@ -26,19 +24,26 @@ public:
 	float getEnergyLvl();
 	float getHungerLvl();
 	float getpetPriceWithoutDiscount();
+	long getlastFeedingTime();
+	long getlastPlayTime();
 	int getPetId();
 	int getOwnerID();
+	bool isOwnerSet();
+	bool getRentStatus();
+	long rentTimeLeft();
 	string getPetName();
 	string getPetDescription();
  
 	virtual string getPetType();
 
 	//setters
-	void setMoodIndex(float newMoodIndex);
-	void setFriendlinessIndex(float newFriendlinessIndex);
-	void setEnergyLvl(float newEnergyLvl);
-	void setHungerLvl(float newHungerLvl);
-
+	void setMoodIndex(long newMoodIndex);
+	void setFriendlinessIndex(long newFriendlinessIndex);
+	void setEnergyLvl(long newEnergyLvl);
+	void setHungerLvl(long newHungerLvl);
+	void setPetName(int customerId);
+	void updateLastFeedTime();
+	void updateLastPlayTime();
 private:
 
 	string petType;
@@ -47,11 +52,14 @@ private:
 	static int idIncrementer;
 	int petID;
 
+	//info
 	string petName;
 	string description; // what the pet does(a description)
 
+	//energy levels
 	float moodIndex, friendlinessIndex, energyLvl, hungerLvl; // not static changes only when customer buys a pet
 
+	//Discount Price
 	float petPriceWithoutDiscount;
 
 	//ownership statuses
@@ -60,5 +68,5 @@ private:
 	int ownerId;
 	
 	bool freeTrial, purchasing;
-	long timeOfpurchase, lastFeeding;
+	long timeOfpurchase, lastFeedingTime, lastPlayTime;
 };
